@@ -1,12 +1,11 @@
-import { expect, test } from 'vitest'
-
+const test = require('ava');
 import { templateMatch } from '../index.js';
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+const fs = require('fs');
+const path = require('path');
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+function readImage(filePath) {
+  return fs.readFileSync(path.join(__dirname, 'fixtures', filePath));
+}
 
 const needleScale = 1;
 
@@ -14,13 +13,13 @@ function readImage(filePath) {
   return fs.readFileSync(path.join(__dirname, 'fixtures', filePath));
 }
 
-test('match template', async () => {
+test('match template', async t => {
   const haystackBuffer = readImage('haystack.png');
   const needleBuffer = readImage('needle.png');
   const result = await templateMatch(haystackBuffer, needleBuffer, {
     scale: 1 / needleScale,
   });
   console.log(result);
-  expect(result.found).toBe(true);
+  t.true(result.found);
 });
 
