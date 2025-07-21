@@ -1,5 +1,5 @@
 const { cv, cvTranslateError } = require('opencv-wasm');
-const Jimp = require('jimp').Jimp;
+const Jimp = require('jimp');
 
 /**
  * 模板匹配选项
