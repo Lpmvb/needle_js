@@ -1,5 +1,5 @@
 const test = require('ava');
-import { templateMatch } from '../index.js';
+const { templateMatch } = require('../index.js');
 const fs = require('fs');
 const path = require('path');
 
