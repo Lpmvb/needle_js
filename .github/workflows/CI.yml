@@ -24,9 +24,14 @@ jobs:
         settings:
           - host: macos-15
             target: aarch64-apple-darwin
+          - host: macos-13
+            target: x86_64-apple-darwin
+            arch: x64
           - host: windows-latest
             target: x86_64-pc-windows-msvc
         node:
+          - '14'
+          - '16'
           - '18'
           - '20'
     runs-on: ${{ matrix.settings.host }}
