@@ -1,0 +1,17 @@
+{
+  "name": "needle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jimp": "^1.6.0",
+    "opencv-wasm": "^4.3.0-10",
+    "vitest": "^2.1.9"
+  }
+}
