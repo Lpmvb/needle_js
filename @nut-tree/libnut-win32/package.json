@@ -1,0 +1,86 @@
+{
+  "_from": "@nut-tree/libnut-win32@2.7.1",
+  "_id": "@nut-tree/libnut-win32@2.7.1",
+  "_inBundle": false,
+  "_integrity": "sha512-QmaQt1U7jXNjhqb10x6Ziijbhvqn2o50WgADZMM7mADVc5iDf3Xhd9yA1TmiGbgfqxkRPq9HpuInoYBz0U234g==",
+  "_location": "/@nut-tree/libnut-win32",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@nut-tree/libnut-win32@2.7.1",
+    "name": "@nut-tree/libnut-win32",
+    "escapedName": "@nut-tree%2flibnut-win32",
+    "scope": "@nut-tree",
+    "rawSpec": "2.7.1",
+    "saveSpec": null,
+    "fetchSpec": "2.7.1"
+  },
+  "_requiredBy": [
+    "/@nut-tree/libnut"
+  ],
+  "_resolved": "http://registry.npm.com/@nut-tree%2flibnut-win32/-/libnut-win32-2.7.1.tgz",
+  "_shasum": "3c277531f9dbafd7e4b4a59a3dc8fd522d3f5151",
+  "_spec": "@nut-tree/libnut-win32@2.7.1",
+  "_where": "/Users/heyunfei/github/opencv/node_modules/@nut-tree/libnut",
+  "author": {
+    "name": "dry Software UG",
+    "email": "info@dry.software",
+    "url": "haftungsbeschränkt"
+  },
+  "bugs": {
+    "url": "https://github.com/nut-tree/nut.js/issues"
+  },
+  "bundleDependencies": false,
+  "cpu": [
+    "x64",
+    "arm64"
+  ],
+  "dependencies": {
+    "@nut-tree/node-mac-permissions": "2.2.1",
+    "bindings": "1.5.0"
+  },
+  "deprecated": false,
+  "description": "libnut is an N-API module for desktop automation with node",
+  "devDependencies": {
+    "cmake-js": "7.3.0",
+    "node-addon-api": "7.1.0"
+  },
+  "engines": {
+    "node": ">=10.15.3"
+  },
+  "homepage": "https://nutjs.dev",
+  "keywords": [
+    "GUI",
+    "Automation",
+    "mouse",
+    "keyboard",
+    "screenshot",
+    "image",
+    "desktop",
+    "screen",
+    "recognition",
+    "autohotkey"
+  ],
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "name": "@nut-tree/libnut-win32",
+  "optionalDependencies": {
+    "@nut-tree/node-mac-permissions": "2.2.1"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "scripts": {
+    "build:debug": "cmake-js rebuild --CDCMAKE_OSX_ARCHITECTURES=\"arm64;x86_64\" --debug",
+    "build:release": "cmake-js rebuild --CDCMAKE_OSX_ARCHITECTURES=\"arm64;x86_64\"",
+    "clean": "cmake-js clean",
+    "patch": "node ./patch-packagename.js",
+    "prepublishOnly": "npm run build:release",
+    "publish:next": "npm publish --tag next"
+  },
+  "typings": "index.d.ts",
+  "version": "2.7.1"
+}
